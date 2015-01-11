@@ -15,7 +15,10 @@ Notes:
 
 I choose not to do the remaining two optional stories because they conflicted with my design/UI choices.  The app has a handwriting on paper look and feel, and that look and feel doesn't have an obvious light/dark theme.  I considered chalk on chalkboard, but felt that was silly for a bill/tip calculation, and decided against it.  The currency text inputs format themselves with a prefixed "$" and a decimal in the appropriate place as the user types.  Reimplementing that functionality to support leading and trailing currency signs was something I didn't feel like doing.
 
-I added some additional features -- mostly UI features -- that I wanted.  The most salient of which is that all the numeric values shown are editable.  The constraint that `total_amount = check_amount + check_amount * tip_percentage` is used to calculate the remaining three values if the user changes one of them.  Other features include 
+I added some additional features -- mostly UI features -- that I wanted.  The most salient of which is that all the numeric values shown are editable.  The constraint that 
+
+    total_amount = check_amount + check_amount * tip_percentage
+is used to calculate the remaining three values if the user changes one of them.  Other features include 
 
 * Decimal-less numeric input.  The user enters a string of digits only, and they are interpreted as a two-decimal value.  You can still backspace, edit in the middle of the string, etc.  Percentage values are similar: they're rendered back including a percent sign.
 * One decimal tip.  If the user enters a tip amount that does not round to a "0" first decimal place, then a first decimal place on the tip_percentage will be shown (this is kind of an easter egg)
@@ -28,7 +31,7 @@ I added some additional features -- mostly UI features -- that I wanted.  The mo
 
 Walkthrough of all user stories:
 
-![Video Walkthrough](anim_rotten_tomatoes.gif)
+![Video Walkthrough](codepath-video-1.gif)
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
